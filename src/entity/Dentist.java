@@ -1,11 +1,15 @@
 package entity;
 
+import org.apache.log4j.Logger;
+
 public class Dentist {
+
     //Properties
     private Long id;
     private int dentalLicense;
     private String lastName;
     private String name;
+    private static final Logger LOGGER = Logger.getLogger(Dentist.class);
 
     //Constructor
     public Dentist(int dentalLicense, String lastName, String name) {

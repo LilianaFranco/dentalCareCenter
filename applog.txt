@@ -1,0 +1,1 @@
+INFO    2022-10-30 20:19:31,687 [main] entity.Patient  - El paciente fue creado

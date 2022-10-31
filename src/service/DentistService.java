@@ -2,6 +2,7 @@ package service;
 
 import DAO.DAO;
 import entity.Dentist;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ public class DentistService{
 
     //Properties
     private DAO<Dentist> dentistDAO;
+    private static final Logger LOGGER = Logger.getLogger(DentistService.class);
 
     //Getter and Setter
     public DAO<Dentist> getDentistDAO() {
@@ -32,10 +34,12 @@ public class DentistService{
         boolean answer = false;
         if(dentistDAO.search(id)!=null){
             dentistDAO.delete(id);
-            System.out.println("El odontologo fue eliminado.");
+            System.out.println("El odontologo fue eliminado de la base de datos.");
+            LOGGER.info("El odontologo fue eliminado de la base de datos.");
             answer = true;
         }else{
-            System.out.println("El odontologo no existe.");
+            System.out.println("El odontologo no existe en la base de datos.");
+            LOGGER.info("El odontologo no existe en la base de datos.");
         }
         return answer;
     }
@@ -44,11 +48,12 @@ public class DentistService{
     public Dentist updateDentist(Dentist dentist){
         Long id = dentist.getId();
         if(dentistDAO.search(id)!=null){
-            System.out.println("El odontologo fue actualizado");
+            System.out.println("El odontologo fue actualizado en la base de datos.");
+            LOGGER.info("El odontologo fue actualizado en la base de datos.");
             return dentistDAO.update(dentist);
         }else{
-            System.out.println("El odontologo no existe");
-            System.out.println();
+            System.out.println("El odontologo no existe en la base de datos.");
+            LOGGER.info("El odontologo no existe en la base de datos.");
             return null;
         }
     }
