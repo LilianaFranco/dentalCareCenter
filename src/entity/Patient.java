@@ -2,14 +2,18 @@ package entity;
 
 import org.apache.log4j.Logger;
 
+import java.time.LocalDate;
+
 public class Patient {
 
     //Properties
-    private Long Id;
+    private int Id;
+    private int idCard;
     private String Lastname;
     private String name;
     private String address;
-    private int idCard;
+    private LocalDate registrationDate;
+
     private static final Logger LOGGER = Logger.getLogger(Patient.class);
 
     //Constructor
@@ -18,15 +22,16 @@ public class Patient {
         this.name = name;
         this.address = address;
         this.idCard = idCard;
+        this.registrationDate = LocalDate.now();
         LOGGER.info("El paciente fue creado");
     }
 
     //Getters and Setters
-    public Long getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         Id = id;
     }
 

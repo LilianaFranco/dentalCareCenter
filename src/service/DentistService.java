@@ -4,6 +4,7 @@ import DAO.DAO;
 import entity.Dentist;
 import org.apache.log4j.Logger;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class DentistService{
@@ -24,13 +25,14 @@ public class DentistService{
     //Methods
 
     //Add a new dentist
-    public Dentist addDentist(Dentist dentist){
+    public Dentist addDentist(Dentist dentist) throws SQLException {
+
         return dentistDAO.add(dentist);
     }
 
     //Delete dentist. If the dentist exists, it is deleted and returns true. If the dentist does not exist, it returns false.
-    public boolean deleteDentist(Dentist dentist){
-        Long id = dentist.getId();
+    public boolean deleteDentist(Dentist dentist) throws SQLException {
+        int id = dentist.getId();
         boolean answer = false;
         if(dentistDAO.search(id)!=null){
             dentistDAO.delete(id);
@@ -45,8 +47,8 @@ public class DentistService{
     }
 
     //Update an existing dentist. If he doesn't exist returns null.
-    public Dentist updateDentist(Dentist dentist){
-        Long id = dentist.getId();
+    public Dentist updateDentist(Dentist dentist) throws SQLException {
+        int id = dentist.getId();
         if(dentistDAO.search(id)!=null){
             System.out.println("El odontologo fue actualizado en la base de datos.");
             LOGGER.info("El odontologo fue actualizado en la base de datos.");
@@ -59,7 +61,7 @@ public class DentistService{
     }
 
     //List all dentist
-    public List<Dentist> listDentists(){
+    public List<Dentist> listDentists() throws SQLException {
         return dentistDAO.listAllElements();
     }
 
