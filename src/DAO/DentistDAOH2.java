@@ -35,10 +35,11 @@ public class DentistDAOH2 implements DAO<Dentist>{
             preparedStatement.setString(4, dentist.getName());
 
             preparedStatement.executeUpdate();
+            LOGGER.info("El odontologo ha sido creado.");
             preparedStatement.close();
 
         } catch (ClassNotFoundException e) {
-            LOGGER.error("Error al agregar Odontologo a la base de datos");
+            LOGGER.error("Error al agregar Odontologo a la base de datos.");
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -57,8 +58,8 @@ public class DentistDAOH2 implements DAO<Dentist>{
         try {
             Class.forName(DB_JDBC_Driver);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            preparedStatement = connection.prepareStatement("SELECT * FROM dentist where id=?");
-            preparedStatement.setInt(1, dentist.getId());
+            preparedStatement = connection.prepareStatement("SELECT * FROM dentists where id=?");
+            preparedStatement.setInt(1, id);
             ResultSet result = preparedStatement.executeQuery();
 
             while(result.next()){
@@ -73,10 +74,10 @@ public class DentistDAOH2 implements DAO<Dentist>{
                 dentist.setName(dentistName);
             }
             preparedStatement.close();
-            LOGGER.error("El Odontologo fue encontrado en la base de datos.");
+            LOGGER.info("El Odontologo fue encontrado en la base de datos.");
 
         } catch (ClassNotFoundException e) {
-            LOGGER.error("Error, Odontologo no encontrado en la base de datos");
+            LOGGER.error("Error, Odontologo no fue encontrado en la base de datos");
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -102,11 +103,12 @@ public class DentistDAOH2 implements DAO<Dentist>{
             preparedStatement = connection.prepareStatement("DELETE FROM dentists where id=?");
             preparedStatement.setInt(1, id);
 
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
             preparedStatement.close();
+            LOGGER.info("El odontologo fue eliminado de la base de datos.");
 
         } catch (ClassNotFoundException e) {
-            LOGGER.error("Error al agregar Odontologo a la base de datos");
+            LOGGER.error("Error, el odontologo no fue encontrado en la base de datos.");
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -143,11 +145,9 @@ public class DentistDAOH2 implements DAO<Dentist>{
             }
 
             preparedStatement.executeUpdate();
-            LOGGER.error("El Odontologo fue creado en la base de datos.");
             preparedStatement.close();
 
         } catch (ClassNotFoundException e) {
-            LOGGER.error("Error al agregar Odontologo a bbase de datos");
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -1,1 +1,23 @@
 INFO    2022-10-30 20:19:31,687 [main] entity.Patient  - El paciente fue creado
+ERROR   2022-11-01 00:52:11,555 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 00:53:07,287 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 00:54:28,816 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 00:55:11,114 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 00:55:11,146 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+ERROR   2022-11-01 00:56:25,581 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 00:56:25,597 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-01 00:56:25,612 [main] service.DentistService  - El odontologo fue eliminado de la base de datos.
+ERROR   2022-11-01 00:59:22,731 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 01:00:37,771 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 01:00:37,802 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-01 01:00:37,818 [main] service.DentistService  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-01 01:03:22,864 [main] service.DentistService  - El odontologo fue eliminado de la base de datos.
+ERROR   2022-11-01 01:05:59,736 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 01:06:11,155 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 01:06:11,186 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-01 01:06:11,186 [main] service.DentistService  - El odontologo fue eliminado de la base de datos.
+ERROR   2022-11-01 01:09:09,287 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 01:09:22,859 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-01 01:09:22,890 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+ERROR   2022-11-01 01:09:22,890 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-01 01:09:22,890 [main] service.DentistService  - El odontologo fue eliminado de la base de datos.
