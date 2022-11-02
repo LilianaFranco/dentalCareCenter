@@ -49,10 +49,10 @@ public class DentistService{
     //Update an existing dentist. If he doesn't exist returns null.
     public Dentist updateDentist(Dentist dentist) throws SQLException {
         int id = dentist.getId();
-        if(dentistDAO.search(id)!=null){
+        if(dentistDAO.update(dentist)){
             System.out.println("El odontologo fue actualizado en la base de datos.");
             LOGGER.info("El odontologo fue actualizado en la base de datos.");
-            return dentistDAO.update(dentist);
+            return dentistDAO.search(id);
         }else{
             System.out.println("El odontologo no existe en la base de datos.");
             LOGGER.info("El odontologo no existe en la base de datos.");

@@ -57,4 +57,14 @@ public class Dentist {
     }
 
     //Methods
+
+    @Override
+    public String toString() {
+        return "Dentist{" +
+                "id=" + id +
+                ", dentalLicense=" + dentalLicense +
+                ", lastName='" + lastName + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

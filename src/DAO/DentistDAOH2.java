@@ -36,6 +36,7 @@ public class DentistDAOH2 implements DAO<Dentist>{
 
             preparedStatement.executeUpdate();
             LOGGER.info("El odontologo ha sido creado.");
+
             preparedStatement.close();
 
         } catch (ClassNotFoundException e) {
@@ -43,14 +44,16 @@ public class DentistDAOH2 implements DAO<Dentist>{
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            connection.close();
         }
 
         return dentist;
     }
 
     @Override
-    public Dentist search(int id) throws SQLException {
 
+    public Dentist search(int id) throws SQLException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Dentist dentist = null;
@@ -81,15 +84,49 @@ public class DentistDAOH2 implements DAO<Dentist>{
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            connection.close();
         }
         return dentist;
     }
 
     @Override
-    public Dentist update(Dentist type) {
+    public boolean update(Dentist dentist) throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
 
+        try {
+            Class.forName(DB_JDBC_Driver);
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            preparedStatement = connection.prepareStatement("UPDATE dentists SET id =?, dentalLicense=?, lastName = ?, name =? WHERE id = ?");
+            preparedStatement.setInt(1, dentist.getId());
+            preparedStatement.setInt(2, dentist.getDentalLicense());
+            preparedStatement.setString(3, dentist.getLastName());
+            preparedStatement.setString(4, dentist.getName());
+            preparedStatement.setInt(5, dentist.getId());
 
-        return null;
+            int response = preparedStatement.executeUpdate();
+            if(response==1){
+                LOGGER.info("El Odontologo fue encontrado en la base de datos y esta actualizado.");
+                return true;
+            }else if (response>1) {
+                LOGGER.info("Cuidado, hay mas de un odontologo con el mismo Id.");
+                return false;
+            }else if (response==0){
+                LOGGER.info("El Odontologo fue encontrado en la base de datos y esta actualizado.");
+                return false;
+            }
+            preparedStatement.close();
+
+        } catch (ClassNotFoundException e) {
+            LOGGER.error("Error");
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            connection.close();
+        }
+       return false;
     }
 
     @Override
@@ -112,6 +149,8 @@ public class DentistDAOH2 implements DAO<Dentist>{
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            connection.close();
         }
     }
 
@@ -125,7 +164,7 @@ public class DentistDAOH2 implements DAO<Dentist>{
         try {
             Class.forName(DB_JDBC_Driver);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            preparedStatement = connection.prepareStatement("SELECT * FROM dentist");
+            preparedStatement = connection.prepareStatement("SELECT * FROM dentists");
 
             ResultSet result = preparedStatement.executeQuery();
 
@@ -144,13 +183,16 @@ public class DentistDAOH2 implements DAO<Dentist>{
                 dentists.add(dentist);
             }
 
-            preparedStatement.executeUpdate();
+            preparedStatement.executeQuery();
             preparedStatement.close();
 
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            connection.close();
+
         }
         return dentists;
     }

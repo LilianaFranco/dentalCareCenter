@@ -16,8 +16,11 @@ public class Main {
         DentistService dentistService =  new DentistService();
         dentistService.setDentistDAO(new DentistDAOH2());
 
+        Dentist dentist2 =  new Dentist(123, 9874, "Osorio", "Manuel Aberto");
         dentistService.addDentist(dentist);
-        dentistService.deleteDentist(dentist);
+        dentistService.updateDentist(dentist2);
+        System.out.println(dentistService.listDentists());
+
 
     }
 }

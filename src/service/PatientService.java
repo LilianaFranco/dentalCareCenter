@@ -11,6 +11,8 @@ import java.util.List;
 public class PatientService {
     //Properties
     private DAO<Patient> patientDAO;
+    private static final Logger LOGGER = Logger.getLogger(Dentist.class);
+
 
     //Getter and Setter
     public DAO<Patient> getPatientDAO() {
@@ -42,9 +44,13 @@ public class PatientService {
     //Update an existing patient. If he doesn't exist returns null.
     public Patient updatePatient(Patient patient) throws SQLException {
         int id = patient.getId();
-        if(patientDAO.search(id)!=null){
-            return patientDAO.update(patient);
+        if(patientDAO.update(patient)){
+            System.out.println("El odontologo fue actualizado en la base de datos.");
+            LOGGER.info("El odontologo fue actualizado en la base de datos.");
+            return patientDAO.search(id);
         }else{
+            System.out.println("El odontologo no existe en la base de datos.");
+            LOGGER.info("El odontologo no existe en la base de datos.");
             return null;
         }
     }

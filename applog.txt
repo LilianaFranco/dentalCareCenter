@@ -21,3 +21,19 @@ ERROR   2022-11-01 01:09:22,859 [main] entity.Dentist  - El odontologo ha sido c
 ERROR   2022-11-01 01:09:22,890 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
 ERROR   2022-11-01 01:09:22,890 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
 INFO    2022-11-01 01:09:22,890 [main] service.DentistService  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-01 21:04:28,648 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-01 21:04:28,788 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-01 21:04:28,804 [main] service.DentistService  - El odontologo fue actualizado en la base de datos.
+INFO    2022-11-01 21:04:28,898 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-01 21:05:21,472 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-01 21:05:21,597 [main] entity.Dentist  - Cuidado, hay más de un odontologo con el mismo Id.
+INFO    2022-11-01 21:05:21,628 [main] service.DentistService  - El odontologo no existe en la base de datos.
+INFO    2022-11-01 21:06:32,257 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-01 21:06:32,367 [main] entity.Dentist  - Cuidado, hay más de un odontologo con el mismo Id.
+INFO    2022-11-01 21:06:32,383 [main] service.DentistService  - El odontologo no existe en la base de datos.
+INFO    2022-11-01 21:09:17,866 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-01 21:09:18,023 [main] entity.Dentist  - Cuidado, hay mas de un odontologo con el mismo Id.
+INFO    2022-11-01 21:09:18,054 [main] service.DentistService  - El odontologo no existe en la base de datos.
+INFO    2022-11-01 21:11:11,723 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-01 21:11:11,867 [main] entity.Dentist  - Cuidado, hay mas de un odontologo con el mismo Id.
+INFO    2022-11-01 21:11:11,898 [main] service.DentistService  - El odontologo no existe en la base de datos.
