@@ -344,3 +344,56 @@ INFO    2022-11-02 22:03:38,639 [main] entity.Patient  - El paciente fue creado.
 INFO    2022-11-02 22:03:38,677 [main] entity.Patient  - El paciente fue creado.
 INFO    2022-11-02 22:03:38,780 [main] entity.Patient  - El paciente fue encontrado en la base de datos y esta actualizado.
 INFO    2022-11-02 22:03:38,890 [main] entity.Patient  - El paciente fue eliminado de la base de datos.
+INFO    2022-11-02 23:04:07,000 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 23:04:07,078 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 23:04:07,125 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 23:04:07,156 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 23:04:07,266 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 23:04:07,359 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-02 23:04:07,469 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-02 23:04:07,516 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-02 23:04:07,547 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-02 23:04:07,594 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-02 23:04:07,641 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-02 23:04:07,797 [main] entity.Patient  - El paciente fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 23:04:07,906 [main] entity.Patient  - El paciente fue eliminado de la base de datos.
+INFO    2022-11-03 09:00:12,945 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 09:00:13,070 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 09:02:19,841 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 09:02:19,955 [main] entity.Dentist  - Cuidado, hay mas de un odontologo con el mismo Id.
+INFO    2022-11-03 09:03:06,096 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 09:03:06,243 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 09:08:52,126 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 09:08:52,240 [main] entity.Patient  - El paciente fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 09:09:19,322 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 09:09:19,437 [main] entity.Patient  - Cuidado, hay mas de un paciente con el mismo Id.
+INFO    2022-11-03 09:09:46,212 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 09:09:46,351 [main] entity.Patient  - Cuidado, hay mas de un paciente con el mismo Id.
+INFO    2022-11-03 09:10:52,749 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 09:10:52,880 [main] entity.Patient  - El paciente fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 14:23:55,621 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:23:55,936 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:23:56,110 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:23:56,283 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:23:56,708 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 14:23:57,193 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-03 14:23:57,508 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:23:57,638 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:23:57,786 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:23:57,954 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:23:58,238 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:23:58,718 [main] entity.Patient  - Cuidado, hay mas de un paciente con el mismo Id.
+INFO    2022-11-03 14:23:59,088 [main] entity.Patient  - El paciente fue eliminado de la base de datos.
+INFO    2022-11-03 14:25:09,511 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:25:09,668 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:25:09,795 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:25:09,910 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-03 14:25:10,333 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 14:25:10,690 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-03 14:25:10,966 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:25:11,082 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:25:11,234 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:25:11,351 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:25:11,481 [main] entity.Patient  - El paciente fue creado.
+INFO    2022-11-03 14:25:11,790 [main] entity.Patient  - El paciente fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-03 14:25:12,270 [main] entity.Patient  - El paciente fue eliminado de la base de datos.

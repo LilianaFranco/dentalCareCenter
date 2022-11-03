@@ -11,7 +11,7 @@ public class DentistDAOH2 implements DAO<Dentist>{
 
     //Properties to create connection to DBH2
     private static final String DB_JDBC_Driver = "org.h2.Driver";
-    private static final String DB_URL = "jdbc:h2:~/dentalCareCenter";
+    private static final String DB_URL = "jdbc:h2:~/dentalCareCenter;INIT=RUNSCRIPT FROM 'create.sql'";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "";
 
