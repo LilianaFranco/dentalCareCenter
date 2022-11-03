@@ -37,3 +37,76 @@ INFO    2022-11-01 21:09:18,054 [main] service.DentistService  - El odontologo n
 INFO    2022-11-01 21:11:11,723 [main] entity.Dentist  - El odontologo ha sido creado.
 INFO    2022-11-01 21:11:11,867 [main] entity.Dentist  - Cuidado, hay mas de un odontologo con el mismo Id.
 INFO    2022-11-01 21:11:11,898 [main] service.DentistService  - El odontologo no existe en la base de datos.
+INFO    2022-11-02 17:16:31,646 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 17:16:31,768 [main] entity.Dentist  - Cuidado, hay mas de un odontologo con el mismo Id.
+INFO    2022-11-02 17:16:31,787 [main] service.DentistService  - El odontologo no existe en la base de datos.
+INFO    2022-11-02 17:20:21,462 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 17:20:21,547 [main] entity.Dentist  - Cuidado, hay mas de un odontologo con el mismo Id.
+INFO    2022-11-02 17:38:35,655 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 17:38:35,786 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 17:38:35,868 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+ERROR   2022-11-02 18:12:21,479 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+INFO    2022-11-02 18:12:50,001 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:12:50,089 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:12:50,133 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:12:50,281 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 18:12:50,319 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 18:12:50,352 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 18:12:50,399 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+ERROR   2022-11-02 18:21:38,129 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+ERROR   2022-11-02 18:26:01,845 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+INFO    2022-11-02 18:26:19,361 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:26:19,456 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-02 18:26:19,526 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+INFO    2022-11-02 18:28:37,972 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-02 18:28:38,057 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+INFO    2022-11-02 18:29:26,842 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:29:26,919 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:29:27,082 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 18:29:27,123 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 18:29:27,158 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 18:29:27,193 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+ERROR   2022-11-02 18:41:05,443 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+INFO    2022-11-02 18:41:26,887 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:41:26,953 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:41:27,016 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 18:41:27,165 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 18:41:27,213 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 18:41:27,255 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 18:41:27,299 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-02 18:55:28,923 [main] entity.Dentist  - El odontologo ha sido creado.
+ERROR   2022-11-02 18:55:29,033 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+ERROR   2022-11-02 18:58:07,294 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+ERROR   2022-11-02 19:13:31,509 [main] entity.Dentist  - Error al agregar Odontologo a la base de datos.
+INFO    2022-11-02 19:19:13,099 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:19:13,175 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:19:13,245 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:19:13,288 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:19:13,434 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 19:19:13,471 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 19:19:13,502 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 19:19:13,543 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-02 19:43:39,732 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:43:39,813 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:43:39,874 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:43:39,934 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:43:40,073 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 19:43:40,111 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 19:43:40,144 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 19:43:40,179 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-02 19:49:43,856 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:49:43,927 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:49:43,974 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:49:44,016 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 19:49:44,145 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 19:49:44,185 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 19:49:44,223 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 19:49:44,271 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.
+INFO    2022-11-02 20:04:41,030 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 20:04:41,085 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 20:04:41,119 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 20:04:41,156 [main] entity.Dentist  - El odontologo ha sido creado.
+INFO    2022-11-02 20:04:41,294 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos y esta actualizado.
+INFO    2022-11-02 20:04:41,345 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 20:04:41,379 [main] entity.Dentist  - El Odontologo fue encontrado en la base de datos.
+INFO    2022-11-02 20:04:41,422 [main] entity.Dentist  - El odontologo fue eliminado de la base de datos.

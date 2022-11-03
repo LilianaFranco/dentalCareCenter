@@ -34,10 +34,12 @@ public class DentistDAOH2 implements DAO<Dentist>{
             preparedStatement.setString(3, dentist.getLastName());
             preparedStatement.setString(4, dentist.getName());
 
+            connection.setAutoCommit(false);
             preparedStatement.executeUpdate();
             LOGGER.info("El odontologo ha sido creado.");
-
             preparedStatement.close();
+            connection.commit();
+            connection.setAutoCommit(true);
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error al agregar Odontologo a la base de datos.");
@@ -105,6 +107,7 @@ public class DentistDAOH2 implements DAO<Dentist>{
             preparedStatement.setString(4, dentist.getName());
             preparedStatement.setInt(5, dentist.getId());
 
+            connection.setAutoCommit(false);
             int response = preparedStatement.executeUpdate();
             if(response==1){
                 LOGGER.info("El Odontologo fue encontrado en la base de datos y esta actualizado.");
@@ -117,6 +120,8 @@ public class DentistDAOH2 implements DAO<Dentist>{
                 return false;
             }
             preparedStatement.close();
+            connection.commit();
+            connection.setAutoCommit(true);
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error");
@@ -126,7 +131,7 @@ public class DentistDAOH2 implements DAO<Dentist>{
         } finally {
             connection.close();
         }
-       return false;
+        return false;
     }
 
     @Override
@@ -140,8 +145,11 @@ public class DentistDAOH2 implements DAO<Dentist>{
             preparedStatement = connection.prepareStatement("DELETE FROM dentists where id=?");
             preparedStatement.setInt(1, id);
 
+            connection.setAutoCommit(false);
             preparedStatement.executeUpdate();
             preparedStatement.close();
+            connection.setAutoCommit(true);
+
             LOGGER.info("El odontologo fue eliminado de la base de datos.");
 
         } catch (ClassNotFoundException e) {

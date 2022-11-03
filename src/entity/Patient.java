@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class Patient {
 
     //Properties
-    private int Id;
+    private int id;
     private int idCard;
     private String Lastname;
     private String name;
@@ -16,23 +16,33 @@ public class Patient {
 
     private static final Logger LOGGER = Logger.getLogger(Patient.class);
 
+    public Patient(){}
+
     //Constructor
-    public Patient(String lastname, String name, String address, int idCard) {
+    public Patient(int id, int idCard, String lastname, String name, String address, LocalDate registrationDate) {
+        this.id = id;
+        this.idCard = idCard;
         Lastname = lastname;
         this.name = name;
         this.address = address;
-        this.idCard = idCard;
         this.registrationDate = LocalDate.now();
         LOGGER.info("El paciente fue creado");
     }
 
     //Getters and Setters
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        id = id;
+    }
+
+    public int getIdCard(){
+        return idCard;
+    }
+    public void setIdCard(int idCard) {
+        this.idCard = idCard;
     }
 
     public String getLastname() {
@@ -63,8 +73,12 @@ public class Patient {
         return idCard;
     }
 
-    public void setIdNumber(int idCard) {
-        this.idCard = idCard;
+    public LocalDate getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public void setRegistrationDate(LocalDate registrationDate) {
+        this.registrationDate = registrationDate;
     }
 
     //Methods

@@ -12,14 +12,29 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
 
-        Dentist dentist =  new Dentist(123, 9874, "Osorio", "Manuel");
+        //Caso odontologo
+        Dentist dentist =  new Dentist(186, 9874, "Jaramillo", "Ana");
+        Dentist dentist2 =  new Dentist(186, 9875, "Jaramillo", "Ana Maria");
+        Dentist dentist3 = new Dentist(55689, 962, "Guzman", "Daniela");
+        Dentist dentist4 = new Dentist(963985, 8532, "Betancur", "Claudia");
+        Dentist dentist5 = new Dentist(965856, 8532, "Franco", "Victoria");
+
         DentistService dentistService =  new DentistService();
         dentistService.setDentistDAO(new DentistDAOH2());
 
-        Dentist dentist2 =  new Dentist(123, 9874, "Osorio", "Manuel Aberto");
         dentistService.addDentist(dentist);
-        dentistService.updateDentist(dentist2);
+        dentistService.addDentist(dentist3);
+        dentistService.addDentist(dentist4);
+        dentistService.addDentist(dentist5);
+
         System.out.println(dentistService.listDentists());
+
+        dentistService.updateDentist(dentist3);
+        dentistService.deleteDentist(dentist2);
+        System.out.println(dentistService.listDentists());
+
+
+        //Caso paciente
 
 
     }
