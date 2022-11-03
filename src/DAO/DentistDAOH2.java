@@ -1,7 +1,5 @@
 package DAO;
-
 import entity.Dentist;
-import entity.Patient;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
@@ -79,7 +77,6 @@ public class DentistDAOH2 implements DAO<Dentist>{
                 dentist.setName(dentistName);
             }
             preparedStatement.close();
-            LOGGER.info("El Odontologo fue encontrado en la base de datos.");
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error, Odontologo no fue encontrado en la base de datos");
@@ -100,28 +97,30 @@ public class DentistDAOH2 implements DAO<Dentist>{
         try {
             Class.forName(DB_JDBC_Driver);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            preparedStatement = connection.prepareStatement("UPDATE dentists SET id =?, dentalLicense=?, lastName = ?, name =? WHERE id = ?");
-            preparedStatement.setInt(1, dentist.getId());
-            preparedStatement.setInt(2, dentist.getDentalLicense());
-            preparedStatement.setString(3, dentist.getLastName());
-            preparedStatement.setString(4, dentist.getName());
-            preparedStatement.setInt(5, dentist.getId());
+            preparedStatement = connection.prepareStatement("UPDATE dentists SET dentalLicense=?, lastName = ?, name =? WHERE id = ?");
+            preparedStatement.setInt(1, dentist.getDentalLicense());
+            preparedStatement.setString(2, dentist.getLastName());
+            preparedStatement.setString(3, dentist.getName());
+            preparedStatement.setInt(4, dentist.getId());
 
             connection.setAutoCommit(false);
             int response = preparedStatement.executeUpdate();
             if(response==1){
                 LOGGER.info("El Odontologo fue encontrado en la base de datos y esta actualizado.");
+                connection.commit();
+                connection.setAutoCommit(true);
                 return true;
             }else if (response>1) {
                 LOGGER.info("Cuidado, hay mas de un odontologo con el mismo Id.");
+                connection.commit();
+                connection.setAutoCommit(true);
                 return false;
             }else if (response==0){
                 LOGGER.info("El Odontologo fue encontrado en la base de datos y esta actualizado.");
+                connection.commit();
+                connection.setAutoCommit(true);
                 return false;
             }
-            preparedStatement.close();
-            connection.commit();
-            connection.setAutoCommit(true);
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error");
@@ -129,6 +128,7 @@ public class DentistDAOH2 implements DAO<Dentist>{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
+            preparedStatement.close();
             connection.close();
         }
         return false;
@@ -191,7 +191,6 @@ public class DentistDAOH2 implements DAO<Dentist>{
                 dentists.add(dentist);
             }
 
-            preparedStatement.executeQuery();
             preparedStatement.close();
 
         } catch (ClassNotFoundException e) {

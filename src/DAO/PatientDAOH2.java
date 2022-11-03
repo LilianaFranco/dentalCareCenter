@@ -1,6 +1,4 @@
 package DAO;
-
-import entity.Dentist;
 import entity.Patient;
 import org.apache.log4j.Logger;
 
@@ -29,7 +27,7 @@ public class PatientDAOH2 implements DAO<Patient> {
         try {
             Class.forName(DB_JDBC_Driver);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            preparedStatement = connection.prepareStatement("INSERT INTO dentists VALUES (?, ?, ?, ?, ?, ?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO patients VALUES (?, ?, ?, ?, ?, ?)");
             preparedStatement.setInt(1, patient.getId());
             preparedStatement.setInt(2, patient.getIdCard());
             preparedStatement.setString(3, patient.getLastname());
@@ -37,10 +35,12 @@ public class PatientDAOH2 implements DAO<Patient> {
             preparedStatement.setString(5, patient.getAddress());
             preparedStatement.setDate(6, Date.valueOf(patient.getRegistrationDate()));
 
+            connection.setAutoCommit(false);
             preparedStatement.executeUpdate();
-            LOGGER.info("El paciente ha sido creado.");
-
+            LOGGER.info("El paciente fue creado.");
             preparedStatement.close();
+            connection.commit();
+            connection.setAutoCommit(true);
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error al agregar paciente a la base de datos.");
@@ -85,10 +85,9 @@ public class PatientDAOH2 implements DAO<Patient> {
 
             }
             preparedStatement.close();
-            LOGGER.info("El paciente fue encontrado en la base de datos.");
 
         } catch (ClassNotFoundException e) {
-            LOGGER.error("Error, paciente no fue encontrado en la base de datos");
+            LOGGER.error("Error, paciente no fue encontrado en la base de datos.");
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -106,26 +105,32 @@ public class PatientDAOH2 implements DAO<Patient> {
         try {
             Class.forName(DB_JDBC_Driver);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            preparedStatement = connection.prepareStatement("UPDATE patients SET id=?, idCard=?, lastName=?, name=?, address=?, registrationDate=?  WHERE id = ?");
-            preparedStatement.setInt(1, patient.getId());
-            preparedStatement.setInt(2, patient.getIdCard());
-            preparedStatement.setString(3, patient.getLastname());
-            preparedStatement.setString(4, patient.getName());
-            preparedStatement.setString(5, patient.getAddress());
-            preparedStatement.setDate(6, Date.valueOf(patient.getRegistrationDate()));
+            preparedStatement = connection.prepareStatement("UPDATE patients SET idCard=?, lastName=?, name=?, address=?, registrationDate=?  WHERE id = ?");
+            preparedStatement.setInt(1, patient.getIdCard());
+            preparedStatement.setString(2, patient.getLastname());
+            preparedStatement.setString(3, patient.getName());
+            preparedStatement.setString(4, patient.getAddress());
+            preparedStatement.setDate(5, Date.valueOf(patient.getRegistrationDate()));
+            preparedStatement.setInt(6, patient.getId());
 
+            connection.setAutoCommit(false);
             int response = preparedStatement.executeUpdate();
             if(response==1){
                 LOGGER.info("El paciente fue encontrado en la base de datos y esta actualizado.");
+                connection.commit();
+                connection.setAutoCommit(true);
                 return true;
             }else if (response>1) {
                 LOGGER.info("Cuidado, hay mas de un paciente con el mismo Id.");
+                connection.commit();
+                connection.setAutoCommit(true);
                 return false;
             }else if (response==0){
                 LOGGER.info("El paciente fue encontrado en la base de datos y esta actualizado.");
+                connection.commit();
+                connection.setAutoCommit(true);
                 return false;
             }
-            preparedStatement.close();
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error");
@@ -133,6 +138,7 @@ public class PatientDAOH2 implements DAO<Patient> {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
+            preparedStatement.close();
             connection.close();
         }
         return false;
@@ -149,9 +155,12 @@ public class PatientDAOH2 implements DAO<Patient> {
             preparedStatement = connection.prepareStatement("DELETE FROM patients where id=?");
             preparedStatement.setInt(1, id);
 
+            connection.setAutoCommit(false);
             preparedStatement.executeUpdate();
             preparedStatement.close();
             LOGGER.info("El paciente fue eliminado de la base de datos.");
+            connection.commit();
+            connection.setAutoCommit(true);
 
         } catch (ClassNotFoundException e) {
             LOGGER.error("Error, el paciente no fue encontrado en la base de datos.");
@@ -195,7 +204,6 @@ public class PatientDAOH2 implements DAO<Patient> {
                 patients.add(patient);
             }
 
-            preparedStatement.executeQuery();
             preparedStatement.close();
 
         } catch (ClassNotFoundException e) {

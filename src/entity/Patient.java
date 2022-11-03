@@ -14,8 +14,6 @@ public class Patient {
     private String address;
     private LocalDate registrationDate;
 
-    private static final Logger LOGGER = Logger.getLogger(Patient.class);
-
     public Patient(){}
 
     //Constructor
@@ -26,7 +24,6 @@ public class Patient {
         this.name = name;
         this.address = address;
         this.registrationDate = LocalDate.now();
-        LOGGER.info("El paciente fue creado");
     }
 
     //Getters and Setters
@@ -82,4 +79,16 @@ public class Patient {
     }
 
     //Methods
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", idCard=" + idCard +
+                ", Lastname='" + Lastname + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", registrationDate=" + registrationDate +
+                '}';
+    }
 }
